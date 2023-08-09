@@ -51,7 +51,10 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "vue/multi-word-component-names": 0
+      "vue/multi-word-component-names": 0,
+      "no-empty-function": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@angular-eslint/no-empty-lifecycle-method": "off"
     }
   },
   "browserslist": [

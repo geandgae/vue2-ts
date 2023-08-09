@@ -1,5 +1,11 @@
 <template>
   <v-app>
+    <ul class="mt-16">
+      <li><router-link to="/">home</router-link></li>
+      <li @click="link('/')" style="cursor: pointer;">home</li>
+      <li @click="link('/about')" style="cursor: pointer;">about</li>
+    </ul>
+
     <v-app-bar
       app
       color="primary"
@@ -50,7 +56,23 @@ export default Vue.extend({
   name: 'App',
 
   data: () => ({
-    //
-  })
+    path: 'null: String'
+  }),
+  methods: {
+    // link (val: string) {
+    //   this.path = val
+    //   console.log(this.path)
+    //   this.$router.push({
+    //     path: `${val}`
+    //   }).catch(() => undefined)
+    // }
+    link (val: string) {
+      this.path = val
+      // console.log(this.path)
+      this.$router.push({
+        path: `${val}`
+      }).catch(() => {})
+    }
+  }
 })
 </script>
